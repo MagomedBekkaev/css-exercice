@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+/* NAVBAR */
+
+header {
+    background-color: #1B263B;
+    padding: 10px;
+    color: #E0E1DD;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row; /* Ensures items are placed in a row */
+    gap: 10px;
+    cursor: pointer;
+    list-style: none; /* Removes default list styling */
+    padding: 0; /* Removes default padding */
+}
+
+
+header nav ul li {
+    box-sizing: border-box; /* Ensures padding is included in the width/height */
+    padding: 10px; /* Apply uniform padding */
+    display: flex;
+    flex-direction: row;
+}
+
+header nav ul li:last-child{
+    background-color: #415a77;
+    
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    width: fit-content;
+}
+
+header nav ul li:last-child:hover {
+    background-color: #778da9
+}
+
+header div h1 {
+    text-transform: uppercase;
+    line-height: 0.5;
+}
+
+/* NAVBAR END */
+
+
+body{
+    background-color: #0D1B2A
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row ;
+    flex-wrap: wrap;
+}
+
+main div.card {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 300px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: #1B263B ;
+    border-radius: 20px;
+    margin: 10px;
+    border: #415a77 solid 1px;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+main div.card * {
+    width: fit-content;
+}
+
+main div.card:hover{
+    box-shadow: 2px 2px 5px 2px #E0E1DD;
+    transition: all 0.3s ease-in-out;
+}
+
+h3, p {
+    margin: 10px;
+    color: #E0E1DD;
+}
+
+i {
+    color: #415a77;
+    background-color: #778da9;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+}

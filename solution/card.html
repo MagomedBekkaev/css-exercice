@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="card.css">
+    <title>Card CSS !</title>
+</head>
+<body>
+
+
+
+    <header>
+        <i class="fa-solid fa-bars"></i>
+        <div class="logo-mobile">
+            <h1>LearnCSS</h1>
+        </div>
+        <nav>
+            <div class="logo">
+                <h1>LearnCss</h1>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <ul>
+                <li>Accueil</li>
+                <li>A propos</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <div class="overlay"></div>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <i class="fa-regular fa-user"></i>
+            <h3>Products</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, ad tenetur natus,</p>
+        </div>
+        <div class="card">
+            <i class="fa-regular fa-envelope"></i>
+            <h3>Categories</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ullam harum eveniet obcaecati dolor</p>
+        </div>
+        <div class="card">
+            <i class="fa-regular fa-credit-card"></i>
+            <h3>Shopping</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ullam harum eveniet obcaecati dolor</p>
+        </div>
+    </main>
+
+</body>
+<script>
+
+    const openMenu = document.querySelector('.fa-bars')
+    const navbar = document.querySelector('nav')
+    const closeMenu = document.querySelector('.fa-xmark')
+    const overlay = document.querySelector('.overlay')
+
+    // Permet l'ouverture de la nabar lorsqu'on clique sur l'icon burger
+    openMenu.addEventListener('click', () => {
+        // On ajoute la classe active sur le navbar
+        navbar.classList.add('active');
+        // On ajoute la classe active sur l'overlay
+        overlay.classList.add('active');
+    })
+
+    // Permet la fermeture du navbar lorsqu'on clique sur la croix fermer
+    closeMenu.addEventListener('click', () => {
+        // On retire la classe active sur le navbar
+        navbar.classList.remove('active');
+        // On retire la classe active sur l'overlay
+        overlay.classList.remove('active');
+    })
+
+    // Permet la fermeture du navbar lorsqu'on clique sur l'overlay
+    overlay.addEventListener('click', () => {
+        // On retire la classe active sur le navbar
+        navbar.classList.remove('active');
+        // On retire la classe active sur l'overlay
+        overlay.classList.remove('active');
+    })
+
+</script>
+</html>
